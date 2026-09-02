@@ -1,39 +1,8 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <ctype.h>
-
-char *ip;
-
-void E(), T(), F();
-
-void match(char c) {
-    if (*ip == c) ip++;
-    else { printf("Rejected\n"); exit(0); }
-}
-
-void F() {
-    if (isalnum(*ip)) ip++;
-    else if (*ip == '(') { match('('); E(); match(')'); }
-    else { printf("Rejected\n"); exit(0); }
-}
-
-void T() {
-    F();
-    while (*ip == '*' || *ip == '/') { ip++; F(); }
-}
-
-void E() {
-    T();
-    while (*ip == '+' || *ip == '-') { ip++; T(); }
-}
-
-int main() {
-    char str[100];
-    printf("Enter expression: ");
-    scanf("%s", str);
-    ip = str;
-    E();
-    if (*ip == '\0') printf("Accepted\n");
-    else printf("Rejected\n");
-    return 0;
-}
+Step 1: Start.
+Step 2: Read the input expression string into a buffer and set a pointer (ip) to the first character.
+Step 3: Call function E() to parse the expression.
+Step 4: Inside E(), call T(), then repeatedly consume '+' or '-' operators followed by T().
+Step 5: Inside T(), call F(), then repeatedly consume '*' or '/' operators followed by F().
+Step 6: Inside F(), if current character is alphanumeric, advance ip; if '(', consume '(', call E(), and match ')'; otherwise, reject.
+Step 7: After E() returns, if ip reaches the end of the string ('\0'), print "Accepted"; otherwise, print "Rejected".
+Step 8: Stop.
