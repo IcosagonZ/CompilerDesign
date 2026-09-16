@@ -7,6 +7,18 @@
 5. Write a program to minimize any given DFA.
  
 ## Cycle II
+
+### Cycle ???
+1. Count number of vowels and spaces
+2. Count number of lines and tabs
+3. Print strings which end in 10
+4. Print strings which starts with 101 and ends with 11
+5. To replace " " with $
+6. Count number of comments
+7. Count strings which contain k in 5th position
+
+## Real cycle
+
 1. Write a lex program to recognize all strings which does not contain first four characters of your name as a substring.
 2. Write a YACC program to recognize a valid variable which starts with a letter followed by any number of letters or digits.
 3. Implementation of Calculator using LEX and YACC
