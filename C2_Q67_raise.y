@@ -1,11 +1,18 @@
 %{
 #include <stdio.h>
 #include <stdlib.h>
+
+int yylex(void);
+void yyerror(const char *s);
 %}
 
 %token ZERO ONE
 
 %%
+
+/* Axiom rule: Requires a newline at the end to trigger success output */
+input: S '\n' { printf("Valid string\n"); exit(0); }
+     ;
 
 S : ZERO S ONE
   | ZERO ONE
@@ -20,8 +27,8 @@ int main()
     return 0;
 }
 
-int yyerror(char *s)
+void yyerror(const char *s)
 {
     printf("Invalid string\n");
-    return 0;
+    exit(0);
 }
