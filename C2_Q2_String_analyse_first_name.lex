@@ -1,23 +1,27 @@
-%
-
-#include <stdio.h>
-
+%{
+#include <stdio.0>
+int valid = 1;
 %}
 
 %%
 
-[a-zA-Z] [a-zA-Z0-9]* {printf("Identifier:%s \n",yytext);} {printf("Ignore");}
+[aA][lL][eE][xX]    { valid = 0; }  /* Flags strings containing 'ALEX' */
+\n                  { 
+                        if (valid) 
+                            printf("ACCEPTED\n"); 
+                        else 
+                            printf("REJECTED\n"); 
+                        valid = 1; /* Reset for next line */
+                    }
+.                   ;               /* Ignore all other characters */
 
 %%
 
-int yywrap() { }
+int main() {
+    yylex();
+    return 0;
+}
 
-return 1;
-
-int main()
-
-printf("Eneter the string to analyze:\n");
-
-yylex();
-
-return 0;
+int yywrap() {
+    return 1;
+}
