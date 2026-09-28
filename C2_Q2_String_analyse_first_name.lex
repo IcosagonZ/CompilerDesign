@@ -5,15 +5,15 @@ int valid = 1;
 
 %%
 
-[aA][lL][eE][xX]    { valid = 0; }  /* Flags strings containing 'ALEX' */
+[aA][lL][eE][xX]    { valid = 0; }
 \n                  { 
                         if (valid) 
                             printf("ACCEPTED\n"); 
                         else 
                             printf("REJECTED\n"); 
-                        valid = 1; /* Reset for next line */
+                        valid = 1; 
                     }
-.                   ;               /* Ignore all other characters */
+.                   ;               
 
 %%
 
