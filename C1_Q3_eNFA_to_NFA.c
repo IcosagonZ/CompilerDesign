@@ -1,4 +1,3 @@
-// C1 Q3 Write a program to convert NFA with ε transition to NFA without ε transition.
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -17,12 +16,12 @@ void find_e_closure(int state, int current_state) {
 }
 
 int main() {
-    printf("Enter number of states: ");
+    printf("Enter no of states: ");
     scanf("%d", &n_states);
-    printf("Enter number of input symbols (excluding epsilon): ");
+    printf("Enter no of input symbols (excl e_0): ");
     scanf("%d", &n_symbols);
 
-    printf("Enter epsilon transition matrix (1 if transition exists, 0 otherwise):\n");
+    printf("Enter e_0 transition matrix (1 if exists else 0):\n");
     for (int i = 0; i < n_states; i++) {
         for (int j = 0; j < n_states; j++) {
             scanf("%d", &e_transitions[i][j]);
