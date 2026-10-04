@@ -12,3 +12,32 @@
     * Else if the buffer starts with a digit, print it as a **Number**.
     * Otherwise, print it as an **Identifier**.
 6. **Clean Up:** Close the file and end the program.
+
+# Input
+
+```
+int total = 10
+
+while (total > 10){
+    total = total + 1
+}
+
+```
+
+# Output
+
+```
+int : Keyword
+total : Identifier
+= : Operator
+10 : Number
+while : Keyword
+total : Identifier
+> : Operator
+10 : Number
+total : Identifier
+= : Operator
+total : Identifier
++ : Operator
+1 : Number
+```
