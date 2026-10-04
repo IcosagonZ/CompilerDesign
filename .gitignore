@@ -1,0 +1,10 @@
+# Ignore all
+/*
+
+# Whitelist
+!/*.c
+!/*.md
+!/*.c
+!/*.l
+!/*.y
+!.gitignore
