@@ -22,8 +22,9 @@
 1. Write a lex program to recognize all strings which does not contain first four characters of your name as a substring.
 2. Write a YACC program to recognize a valid variable which starts with a letter followed by any number of letters or digits.
 3. Implementation of Calculator using LEX and YACC
-4. Convert the BNF rules into YACC form and write code to generate abstract syntax tree
-5. Write a YACC program to check the syntax of FOR statement in C
+4. Accept string of format {0^n 1^n}
+5. Convert the BNF rules into YACC form and write code to generate abstract syntax tree
+6. Write a YACC program to check the syntax of FOR statement in C
 
 ## Cycle III
 1. Develop an operator precedence parser for a given language.

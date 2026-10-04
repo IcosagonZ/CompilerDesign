@@ -11,7 +11,7 @@
 3. **Output:** Print $\varepsilon\text{-closure}(i)$ for each state $i$.
 
 # Output
-```text
+```
 Enter total no of states: 3
 Enter epsilon transition adjacency matrix (1 if exists else 0):
 0 1 0
@@ -22,5 +22,4 @@ Epsilon Closures
 e-closure(q0) = { q0 q1 q2 }
 e-closure(q1) = { q1 q2 }
 e-closure(q2) = { q2 }
-
 ```
