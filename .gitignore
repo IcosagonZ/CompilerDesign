@@ -3,6 +3,7 @@
 
 # Whitelist
 !/*.c
+!/*.py
 !/*.md
 !/*.c
 !/*.l
