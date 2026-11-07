@@ -6,6 +6,8 @@ closure = [[0,0,0,0],[0,0,0,0],[0,0,0,0], [0,0,0,0]]
 visited = [0,0,0,0]
 
 def dfs(start, current):
+    global visited, closure
+
     visited[current] = 1
     closure[start][current] = 1
 
