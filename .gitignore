@@ -1,5 +1,7 @@
 # Ignore all
 /*
+Practice/
+Practice/*
 
 # Whitelist
 !/*.c
